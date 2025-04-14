@@ -291,7 +291,7 @@ suil_instance_free(SuilInstance* instance)
     if (instance->wrapper) {
 #ifndef _WIN32
       // Never unload modules on windows, causes mysterious segfaults
-      dylib_close(instance->wrapper->lib);
+      // dylib_close(instance->wrapper->lib);
 #endif
       free(instance->wrapper);
     }
