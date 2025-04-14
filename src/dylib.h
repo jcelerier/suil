@@ -46,7 +46,7 @@ enum DylibFlags {
 static inline void*
 dylib_open(const char* const filename, const int flags)
 {
-  return dlopen(filename, flags);
+  return dlopen(filename, flags | RTLD_NODELETE);
 }
 
 static inline int
